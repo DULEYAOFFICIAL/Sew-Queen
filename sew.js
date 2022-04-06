@@ -55,7 +55,7 @@ async function sewQueen() {
         await sendMessageownerMSG(DataKey); await sendMessageADSMSG(DataKey)
         DataKey.logger.level = Details.DEBUG ? 'debug' : 'warn';
         if (Details.SESSION) {DataKey.loadAuthInfo(Session.deCrypt(Details.SESSION));
-        } else { console.log('Need SEW_QUEEN_SESSION \n'.repeat(50));return;}
+        } else { console.log('Need MADAM_MASK_SESSION \n'.repeat(50));return;}
         DataKey.on('credentials-updated', async () => {
                 let authInfo = DataKey.base64EncodedAuthInfo();
         })
@@ -64,9 +64,9 @@ async function sewQueen() {
         });
         DataKey.on('open', async () => {
                 console.log(SOL.LOG); console.log(SOL.PASSC);
-                if (Details.SEWRR == 'raviya') {
+                if (Details.SEWRR == 'mrsmadam') {
                         console.log(SOL.PASSD)
-                } else if (Details.SEWRR !== 'raviya') {
+                } else if (Details.SEWRR !== 'mrsmadam') {
                         throw new Error(SOL.PASSW); return;
                 }
             console.log(SOL.INSTCL); console.log(SOL.INSTC); console.log(SOL.INSTL);
@@ -94,7 +94,7 @@ async function sewQueen() {
                 if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
                 if (Details.NO_ONLINE) { await DataKey.updatePresence(msg.key.remoteJid, Presence.unavailable)}
                 await sendMessageGreetingMSG(DataKey, getMessage, msg)
-                if (GBLACK.ALL_GROUP !== 'raviya') {     
+                if (GBLACK.ALL_GROUP !== 'mrsmadam') {     
                 var grp = GBLACK.ALL_GROUP + ',' + Details.BLOCKCHAT;var sup = grp.split(',')
                 if(msg.key.remoteJid.includes('g.us') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return}
                 await sendMessageMSGMSG(DataKey, msg, 'sew', SQQA)
