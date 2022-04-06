@@ -56,8 +56,8 @@ if(input[1] == '') return await sendMessageFORRateUs(QueenSew, input);
 await sendMessageRateUs(QueenSew, input)
 }));
 var Action = ''
-if (Details.LANG == 'SI') Action = '*✨SEW QUEEN✨ අප්ඩේට්වෙමින් පවතියි!*'
-if (Details.LANG == 'EN') Action = '*✨Sew Queen✨ is Updating!*'
+if (Details.LANG == 'SI') Action = '*✮ ＭＡＤＡＭ ＭＡＳＫ ✮* ```අප්ඩේට්වෙමින් පවතියි...```'
+if (Details.LANG == 'EN') Action = '*✮ ＭＡＤＡＭ ＭＡＳＫ ✮* ```is Updating...```'
 
 SewQueen['IntroduceCMD']({pattern: 'update now$', fromMe: true, dontAdCommandList: true, desc: DATA.UPDATE_NOW_DESC}, (async (message, input) => {
     await git.fetch();
