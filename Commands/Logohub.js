@@ -29,7 +29,7 @@ SewQueen['IntroduceCMD']({
 }));
 SewQueen['IntroduceCMD']({
         pattern: 'png ?(.*)', 
-        fromMe: WorkType, 
+        fromMe: true, 
         dontAdCommandList: true
         }, 
 (async (QueenSew, input) => { 
@@ -37,7 +37,7 @@ await sendMessageEmojiToPng(QueenSew, input)
 })); 
 SewQueen['IntroduceCMD']({
         pattern: 'textlogo ?(.*)', 
-        fromMe: WorkType, 
+        fromMe: true, 
         dontAdCommandList: true
         }, 
 (async (QueenSew, input) => { 
@@ -46,7 +46,7 @@ await sendMessagelogores(QueenSew, input)
 })); 
 SewQueen['IntroduceCMD']({
         pattern: 'fancy ?(.*)', 
-        fromMe: WorkType, 
+        fromMe: true, 
         dontAdCommandList: true
         }, 
 (async (QueenSew, input) => { 
