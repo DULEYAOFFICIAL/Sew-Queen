@@ -75,11 +75,11 @@ var nwjson = await message.client.groupMetadata(message.jid)
         mesaj = '';
         grup['participants'].map(
             async (uye) => {
-                mesaj += '▫️💠 @' + uye.id.split('@')[0] + ' 💠\n';
+                mesaj += '☘ @' + uye.id.split('@')[0] + ' ☘\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         );
-        await message.client.sendMessage(message.jid,nwjson.subject + '\n\n   ❄Group Members❄\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,nwjson.subject + '\n\n   👨‍💻ＭＥＭＢＥＲＳ👨‍💻\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
     
 }));
@@ -92,11 +92,11 @@ let ABSEW = DataHelp.dataGet('admincont');
         mesaj = '';
         grup['participants'].map(async (uye) => {
             if (uye.isAdmin) {
-                mesaj += '💠 @' + uye.id.split('@')[0] + '\n▫️👑 wa.me/' + uye.id.split('@')[0] +  ' 👑\n\n';
+                mesaj += '👨‍💻 @' + uye.id.split('@')[0] + '\n☘ wa.me/' + uye.id.split('@')[0] +  ' ☘\n\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         });
-        await message.client.sendMessage(message.jid,'${nwjson.subject}\n◻    🔱    *👑 Group Admins 👑*    🔱    ◻\n\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,'${nwjson.subject}\n ꧁   *👑 ＡＤＭＩＮＳ 👑*   ꧂\n\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }));
     SewQueen['IntroduceCMD']({pattern: 'tagadmin', fromMe: true, desc: ABSEW.CONTADMİN, dontAdCommandList: true}, (async (message, input) => {
     var nwjson = await message.client.groupMetadata(message.jid) 
@@ -105,9 +105,9 @@ let ABSEW = DataHelp.dataGet('admincont');
         mesaj = '';
         grup['participants'].map(async (uye) => {
             if (uye.isAdmin) {
-                mesaj += '💠 @' + uye.id.split('@')[0] + '\n▫️👑 wa.me/' + uye.id.split('@')[0] +  ' 👑\n\n';
+                mesaj += '👨‍💻 @' + uye.id.split('@')[0] + '\n☘ wa.me/' + uye.id.split('@')[0] +  ' ☘\n\n';
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         });
-        await message.client.sendMessage(message.jid,nwjson.subject + '\n\n◻    🔱    *👑 Group Admins 👑*    🔱    ◻\n\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,nwjson.subject + '\n\n꧁   *👑 ＡＤＭＩＮＳ 👑*   ꧂\n\n\n' + mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }));
